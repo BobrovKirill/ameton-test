@@ -1,0 +1,132 @@
+.questions {
+	margin: 80px 0;
+	@media (max-width: $md3) {
+		margin: 40px 0;
+	}
+  &__container {
+  }
+  &__title {
+  }
+  &__slider {
+    margin-top: 32px;
+  }
+}
+.slider {
+  position: relative;
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $md1) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__cards {
+    display: none;
+    justify-content: space-between;
+    width: 588px;
+		@media (max-width: $md1) {
+			margin-bottom: 16px;
+		}
+    @media (max-width: $md3) {
+      width: 100%;
+    }
+  }
+  & .first,
+  .second {
+    display: flex;
+  }
+  & .first {
+    order: 0;
+  }
+  & .second {
+    order: 1;
+  }
+  &__left-card {
+		cursor: pointer;
+    width: 282px;
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.4s, box-shadow 0.4s;
+    @media (max-width: $md3) {
+      width: 282/588 * 100%;
+      overflow-x: hidden;
+    }
+    &:hover {
+      background-color: rgb(133, 216, 144);
+			box-shadow: 0px 0px 30px rgba(133, 216, 144, 0.08);
+    }
+  }
+  &__right-card {
+		cursor: pointer;
+    width: 282px;
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.4s, box-shadow 0.4s;
+    @media (max-width: $md3) {
+      width: 282/588 * 100%;
+    }
+    &:hover {
+      background-color: rgb(133, 216, 144);
+			box-shadow: 0px 0px 30px rgba(133, 216, 144, 0.08);
+    }
+  }
+  &__controls {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 22px);
+    @media (max-width: $md1) {
+      right: calc(50% - 22px);
+      top: calc(100% - 64px);
+      transform: rotate(90deg);
+    }
+  }
+  &__arrow-next {
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.09);
+    background: url(../images/icons/arrow.png) no-repeat center;
+  }
+}
+.left-card {
+  background-color: $white;
+  display: flex;
+  overflow-y: hidden;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 16px 0 0 16px;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+  &__text {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 150%;
+    font-weight: 500;
+    color: $gray500;
+  }
+  & img {
+    object-fit: none;
+  }
+}
+.right-card {
+  background-color: $white;
+  padding: 16px 16px 0 16px;
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  &__text {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 400;
+    color: $gray500;
+  }
+}

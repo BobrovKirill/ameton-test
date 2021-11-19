@@ -1,0 +1,13 @@
+@mixin font($name, $type, $weight, $variant) {
+	@font-face {
+		font-weight: $weight;
+		font-family: $name;
+		src: url("../fonts/"+$type+".woff");
+		font-variant: $variant;
+	}
+};
+
+@include font("MuseoSansCyrl", "MuseoSansCyrl-400", "400", "normal");
+@include font("MuseoSansCyrl", "MuseoSansCyrl-700", "700", "normal");
+@include font("MuseoSansCyrl", "MuseoSansCyrl-500", "500", "normal");
+@include font("MuseoSansCyrl", "MuseoSansCyrl-700", "600", "normal");

@@ -1,0 +1,52 @@
+@mixin reset {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  button {
+    border-width: 0;
+    background-color: inherit;
+  }
+}
+* {
+  @include reset;
+  font-size: $fontsize;
+  color: $gray900;
+  font-family: $fontfamily;
+  box-sizing: border-box;
+}
+body {
+  background-color: $white;
+}
+.br-40 {
+  border-radius: 40px;
+}
+.br-16 {
+  border-radius: 16px;
+}
+.br-12 {
+  border-radius: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 48px;
+  transition: all 0.3s;
+  font-size: 15px;
+  &:hover {
+    color: $white;
+  }
+}
+.title {
+  text-align: center;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+  @media (max-width: $md2) {
+    font-size: 32px;
+  }
+}
